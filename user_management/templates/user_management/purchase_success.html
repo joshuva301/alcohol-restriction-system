@@ -1,0 +1,84 @@
+<!-- user_management/templates/user_management/purchase_success.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Purchase Confirmation</title>
+    <style>
+        /* Base styling */
+        body { 
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f0f2f5; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+        }
+        .container { 
+            width: 50%; 
+            background-color: #fff; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            text-align: center; 
+            border-top: 8px solid #003366;
+        }
+
+        /* Header styling */
+        .header { 
+            color: #003366; 
+            font-weight: bold; 
+            font-size: 24px; 
+            margin-bottom: 10px; 
+        }
+        .sub-header { 
+            color: #666; 
+            font-size: 18px; 
+            margin-bottom: 20px; 
+        }
+
+        /* Message styling */
+        .message { 
+            color: green; 
+            font-weight: bold; 
+            font-size: 20px; 
+            margin: 20px 0; 
+        }
+        .success-icon { 
+            font-size: 50px; 
+            color: #28a745; 
+            margin-bottom: 10px; 
+        }
+
+        /* Button styling */
+        .back-link { 
+            display: inline-block; 
+            padding: 12px 20px; 
+            background-color: #003366; 
+            color: #fff; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            margin-top: 20px; 
+            font-weight: bold; 
+        }
+        .back-link:hover { 
+            background-color: #002244; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Government of TamilNadu</div>
+        <div class="sub-header">Alcohol Purchase Confirmation</div>
+        
+        <div class="success-icon">✔️</div>
+        <div class="message">Your purchase was successfully processed!</div>
+        
+        <a href="{% url 'vendor_check' %}" class="back-link">Return to Vendor Check</a>
+        <a href="{% url 'history' user.id %}"class="back-link">Purchase History</a>
+
+    </div>
+</body>
+</html>
